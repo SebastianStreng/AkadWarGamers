@@ -7,7 +7,7 @@ using Core;
 
 namespace Application
 {
-    internal class Attack
+    public class Attack
     {
         public static void attack(King king1, King king2)
         {

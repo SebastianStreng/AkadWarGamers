@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Application
 {
-    internal class RandomGenerator
+    public class RandomGenerator
     {
         public static int generateRandom(int min, int max)
         {

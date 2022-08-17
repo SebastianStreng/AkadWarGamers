@@ -8,7 +8,7 @@ namespace Application
 {
     internal class RandomGenerator
     {
-        public static int generateRadom(int min, int max)
+        public static int generateRandom(int min, int max)
         {
             Random rnd = new Random();
 

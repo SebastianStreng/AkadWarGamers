@@ -9,31 +9,41 @@ namespace Application
 {
     public class SpecialAttack
     {
+        public static bool checker { get; set; }
+
         public static void startSpecialAttack(King king1, King king2)
         {
             int selector = RandomGenerator.generateRandom(1, 4);
-
-            switch (selector)
+            if (king1 != null & king2 != null)
             {
-                case 1:
-                    environment(king1, king2);
-                    break;
+                checker = true;
 
-                case 2:
-                    distance_move(king1, king2);
-                    break;
+                switch (selector)
+                {
+                    case 1:
+                        environment(king1, king2);
+                        break;
 
-                case 3:
-                    help(king1, king2);
-                    break;
+                    case 2:
+                        distance_move(king1, king2);
+                        break;
 
-                case 4:
-                    Console.WriteLine("nothing happens");
-                    break;
+                    case 3:
+                        help(king1, king2);
+                        break;
 
-                default:
-                    Console.WriteLine("something went wrong.");
-                    break;
+                    case 4:
+                        Console.WriteLine("nothing happens");
+                        break;
+
+                    default:
+                        Console.WriteLine("something went wrong.");
+                        break;
+                }
+            }
+            else
+            {
+                checker = false;
             }
         }
 

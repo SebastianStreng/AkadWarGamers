@@ -1,4 +1,5 @@
-﻿using Core;
+﻿using System.Threading;
+using Core;
 using Application;
 
 namespace Presentation
@@ -24,7 +25,10 @@ namespace Presentation
 
                 Console.WriteLine("It´s your turn: \n\n\n\n");
                 Selector.SelectInteraction(Arthur, Ludwig);
+
+                Thread.Sleep(3000);
                 Console.WriteLine("\n\n\n Enemie´s turn: ");
+                Thread.Sleep(3000);
                 getRandomAttack(Ludwig, Arthur);
                 Console.WriteLine("\n\n");
             } while (Arthur.warriors > 0 || Ludwig.warriors > 0);

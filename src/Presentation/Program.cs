@@ -27,7 +27,7 @@ namespace Presentation
                 Selector.SelectInteraction(Arthur, Ludwig);
 
                 Thread.Sleep(3000);
-                Console.WriteLine("\n\n\n Enemie´s turn: ");
+                Console.WriteLine("\n\n\n Enemie´s turn...: ");
                 Thread.Sleep(3000);
                 getRandomAttack(Ludwig, Arthur);
                 Console.WriteLine("\n\n");

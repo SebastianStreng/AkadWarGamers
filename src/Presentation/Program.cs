@@ -13,12 +13,12 @@ namespace Presentation
 
             do
             {
-                Console.WriteLine("KING ARTHUR´S VALUES: \n" + "Warriors: " + Arthur.warriors);
+                Console.WriteLine("KING ARTHUR´S VALUES (you): \n" + "Warriors: " + Arthur.warriors);
                 Console.WriteLine("strength: " + Arthur.strength);
                 Console.WriteLine("weapon strength: " + Arthur.weapon_strength);
                 Console.WriteLine("armor strength: " + Arthur.armor_strength + "\n\n");
 
-                Console.WriteLine("KING LUDWIG ´S VALUES: \n" + "Warriors: " + Ludwig.warriors);
+                Console.WriteLine("KING LUDWIG ´S VALUES (enemy): \n" + "Warriors: " + Ludwig.warriors);
                 Console.WriteLine("strength: " + Ludwig.strength);
                 Console.WriteLine("weapon strength: " + Ludwig.weapon_strength);
                 Console.WriteLine("armor strength: " + Ludwig.armor_strength + "\n\n");

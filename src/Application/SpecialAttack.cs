@@ -147,9 +147,10 @@ namespace Application
         private static void smoke_bomb(King king1, King king2)
         {
             king2.strength = king2.strength * 0.85;
+            var difference = king2.warriors * 0.1;
             king2.warriors = Convert.ToInt32(king2.warriors * 0.9);
             Console.WriteLine(king1.name + " throws smokebombs on " + king2.name);
-            Console.WriteLine(king2.name + " looses 15 % strength and " + king2.warriors + " warriors.");
+            Console.WriteLine(king2.name + " looses 15 % strength and " + difference + " warriors.");
         }
 
         private static void additional_warriors(King king1, King king2)

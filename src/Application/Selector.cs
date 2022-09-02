@@ -13,6 +13,12 @@ namespace Application
 
         public static string decision { get; set; }
 
+        /** SelectInteraction() Methode
+         * Lässt den Spieler auswählen, welche Attacke er ausführen möchte.
+         * Aufgerufen wird heirbei die Klasse Attack mit dessen Methoden attack(), getSpecialAttack() und runOver().
+        * @param: King1 und King2, abgeleitet von Klasse King
+        */
+
         public static void SelectInteraction(King king1, King king2)
         {
             if (king1 != null & king2 != null)

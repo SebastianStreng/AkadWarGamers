@@ -1,0 +1,60 @@
+\hypertarget{_selector_8cs_source}{}\doxysection{Selector.\+cs}
+\mbox{\hyperlink{_selector_8cs}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_selector_8cs_source_l00001}00001 \textcolor{keyword}{using }Core;}
+\DoxyCodeLine{\Hypertarget{_selector_8cs_source_l00002}00002 \textcolor{keyword}{using }System;}
+\DoxyCodeLine{\Hypertarget{_selector_8cs_source_l00003}00003 \textcolor{keyword}{using }System.Collections.Generic;}
+\DoxyCodeLine{\Hypertarget{_selector_8cs_source_l00004}00004 \textcolor{keyword}{using }System.Linq;}
+\DoxyCodeLine{\Hypertarget{_selector_8cs_source_l00005}00005 \textcolor{keyword}{using }System.Text;}
+\DoxyCodeLine{\Hypertarget{_selector_8cs_source_l00006}00006 \textcolor{keyword}{using }System.Threading.Tasks;}
+\DoxyCodeLine{\Hypertarget{_selector_8cs_source_l00007}00007 }
+\DoxyCodeLine{\Hypertarget{_selector_8cs_source_l00008}00008 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespace_application}{Application}}}
+\DoxyCodeLine{\Hypertarget{_selector_8cs_source_l00009}00009 \{}
+\DoxyCodeLine{\Hypertarget{_selector_8cs_source_l00010}\mbox{\hyperlink{class_application_1_1_selector}{00010}}     \textcolor{keyword}{public} \textcolor{keyword}{class }\mbox{\hyperlink{class_application_1_1_selector}{Selector}}}
+\DoxyCodeLine{\Hypertarget{_selector_8cs_source_l00011}00011     \{}
+\DoxyCodeLine{\Hypertarget{_selector_8cs_source_l00012}\mbox{\hyperlink{class_application_1_1_selector_af48632c62ae2c3b0d0fa7da5a5e28228}{00012}}         \textcolor{keyword}{public} \textcolor{keyword}{static} \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_application_1_1_selector_af48632c62ae2c3b0d0fa7da5a5e28228}{checker}} \{ \textcolor{keyword}{get}; \textcolor{keyword}{set}; \}}
+\DoxyCodeLine{\Hypertarget{_selector_8cs_source_l00013}00013 }
+\DoxyCodeLine{\Hypertarget{_selector_8cs_source_l00014}\mbox{\hyperlink{class_application_1_1_selector_aa2d79d194947327ace15109f30de3a0d}{00014}}         \textcolor{keyword}{public} \textcolor{keyword}{static} \textcolor{keywordtype}{string} \mbox{\hyperlink{class_application_1_1_selector_aa2d79d194947327ace15109f30de3a0d}{decision}} \{ \textcolor{keyword}{get}; \textcolor{keyword}{set}; \}}
+\DoxyCodeLine{\Hypertarget{_selector_8cs_source_l00015}00015 }
+\DoxyCodeLine{\Hypertarget{_selector_8cs_source_l00022}\mbox{\hyperlink{class_application_1_1_selector_adc810a16720cd9a9af55fb412857a41d}{00022}}         \textcolor{keyword}{public} \textcolor{keyword}{static} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_application_1_1_selector_adc810a16720cd9a9af55fb412857a41d}{SelectInteraction}}(King king1, King king2)}
+\DoxyCodeLine{\Hypertarget{_selector_8cs_source_l00023}00023         \{}
+\DoxyCodeLine{\Hypertarget{_selector_8cs_source_l00024}00024             \textcolor{keywordflow}{if} (king1 != \textcolor{keyword}{null} \& king2 != \textcolor{keyword}{null})}
+\DoxyCodeLine{\Hypertarget{_selector_8cs_source_l00025}00025             \{}
+\DoxyCodeLine{\Hypertarget{_selector_8cs_source_l00026}00026                 \mbox{\hyperlink{class_application_1_1_selector_af48632c62ae2c3b0d0fa7da5a5e28228}{checker}} = \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{_selector_8cs_source_l00027}00027 }
+\DoxyCodeLine{\Hypertarget{_selector_8cs_source_l00028}00028                 Console.WriteLine(\textcolor{stringliteral}{"{}Please select one of the following interactions: \(\backslash\)n"{}} +}
+\DoxyCodeLine{\Hypertarget{_selector_8cs_source_l00029}00029                 \textcolor{stringliteral}{"{}1. Attack \(\backslash\)n"{}} +}
+\DoxyCodeLine{\Hypertarget{_selector_8cs_source_l00030}00030                 \textcolor{stringliteral}{"{}2. Special Attack \(\backslash\)n"{}} +}
+\DoxyCodeLine{\Hypertarget{_selector_8cs_source_l00031}00031                 \textcolor{stringliteral}{"{}3. Run over"{}});}
+\DoxyCodeLine{\Hypertarget{_selector_8cs_source_l00032}00032 }
+\DoxyCodeLine{\Hypertarget{_selector_8cs_source_l00033}00033                 \textcolor{comment}{//decision = "{}4"{} //for testing;}}
+\DoxyCodeLine{\Hypertarget{_selector_8cs_source_l00034}00034                 \mbox{\hyperlink{class_application_1_1_selector_aa2d79d194947327ace15109f30de3a0d}{decision}} = Console.ReadLine();}
+\DoxyCodeLine{\Hypertarget{_selector_8cs_source_l00035}00035 }
+\DoxyCodeLine{\Hypertarget{_selector_8cs_source_l00036}00036                 \textcolor{keywordflow}{switch} (\mbox{\hyperlink{class_application_1_1_selector_aa2d79d194947327ace15109f30de3a0d}{decision}})}
+\DoxyCodeLine{\Hypertarget{_selector_8cs_source_l00037}00037                 \{}
+\DoxyCodeLine{\Hypertarget{_selector_8cs_source_l00038}00038                     \textcolor{keywordflow}{case} \textcolor{stringliteral}{"{}1"{}}:}
+\DoxyCodeLine{\Hypertarget{_selector_8cs_source_l00039}00039                         \mbox{\hyperlink{class_application_1_1_attack}{Attack}}.\mbox{\hyperlink{class_application_1_1_attack_a6abc1027836acdcf0e846cc8cc9824f3}{attack}}(king1, king2);}
+\DoxyCodeLine{\Hypertarget{_selector_8cs_source_l00040}00040                         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{_selector_8cs_source_l00041}00041 }
+\DoxyCodeLine{\Hypertarget{_selector_8cs_source_l00042}00042                     \textcolor{keywordflow}{case} \textcolor{stringliteral}{"{}2"{}}:}
+\DoxyCodeLine{\Hypertarget{_selector_8cs_source_l00043}00043                         \mbox{\hyperlink{class_application_1_1_attack}{Attack}}.\mbox{\hyperlink{class_application_1_1_attack_a209ec748235c3756ed8f811afefa9a62}{getSpecialAttack}}(king1, king2);}
+\DoxyCodeLine{\Hypertarget{_selector_8cs_source_l00044}00044                         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{_selector_8cs_source_l00045}00045 }
+\DoxyCodeLine{\Hypertarget{_selector_8cs_source_l00046}00046                     \textcolor{keywordflow}{case} \textcolor{stringliteral}{"{}3"{}}:}
+\DoxyCodeLine{\Hypertarget{_selector_8cs_source_l00047}00047                         \mbox{\hyperlink{class_application_1_1_attack}{Attack}}.\mbox{\hyperlink{class_application_1_1_attack_addc052bdcf73e88c20d6a69dca1fac4d}{runOver}}(king1, king2);}
+\DoxyCodeLine{\Hypertarget{_selector_8cs_source_l00048}00048                         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{_selector_8cs_source_l00049}00049 }
+\DoxyCodeLine{\Hypertarget{_selector_8cs_source_l00050}00050                     \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{\Hypertarget{_selector_8cs_source_l00051}00051                         Console.WriteLine(\textcolor{stringliteral}{"{}select interaction failed. Please try again."{}});}
+\DoxyCodeLine{\Hypertarget{_selector_8cs_source_l00052}00052                         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{_selector_8cs_source_l00053}00053                 \}}
+\DoxyCodeLine{\Hypertarget{_selector_8cs_source_l00054}00054             \}}
+\DoxyCodeLine{\Hypertarget{_selector_8cs_source_l00055}00055             \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{_selector_8cs_source_l00056}00056             \{}
+\DoxyCodeLine{\Hypertarget{_selector_8cs_source_l00057}00057                 \mbox{\hyperlink{class_application_1_1_selector_af48632c62ae2c3b0d0fa7da5a5e28228}{checker}} = \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{_selector_8cs_source_l00058}00058             \}}
+\DoxyCodeLine{\Hypertarget{_selector_8cs_source_l00059}00059         \}}
+\DoxyCodeLine{\Hypertarget{_selector_8cs_source_l00060}00060     \}}
+\DoxyCodeLine{\Hypertarget{_selector_8cs_source_l00061}00061 \}}
+
+\end{DoxyCode}

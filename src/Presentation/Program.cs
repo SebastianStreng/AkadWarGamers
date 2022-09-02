@@ -8,19 +8,21 @@ using Application;
 //
 namespace Presentation
 {
-    //! Klasse "Program" wird benötigt, um das Spiel zu starten
-    //
+    /** Klasse "Program" wird benötigt, um das Spiel zu starten
+    */
+
     public class Program
     {
         public static void Main(string[] args)
         {
-            //!Instanzen von King-Klasse erzeugen
-            //
+            /**Instanzen von King-Klasse erzeugen
+            */
             King Arthur = new King("King Arthur", 1000, 10, 15, 3);
             King Ludwig = new King("King Ludwig", 1000, 10, 15, 3);
-            //!Do-While-Schleife für den Spielverlauf.
-            //!Ist die Kriegeranzahl von Arthur oder Ludwig kleine oder gleich null, wird das Spiel beendet.
-            //
+
+            /** Do-While-Schleife für den Spielverlauf.
+            * Ist die Kriegeranzahl von Arthur oder Ludwig kleine oder gleich null, wird das Spiel beendet.
+            */
             do
             {
                 Console.WriteLine("KING ARTHUR´S VALUES (you): \n" + "Warriors: " + Arthur.warriors);
@@ -44,8 +46,9 @@ namespace Presentation
             } while (Arthur.warriors > 0 || Ludwig.warriors > 0);
         }
 
-        //! GetRandomAttack-Methode imitiert die KI, indem sie eine Zufällige Auswahl trifft
-        //
+        /** GetRandomAttack() Methode imitiert die KI, indem sie eine Zufällige Auswahl trifft
+        */
+
         private static void getRandomAttack(King king1, King king2)
         {
             int randomPick = RandomGenerator.generateRandom(1, 3);

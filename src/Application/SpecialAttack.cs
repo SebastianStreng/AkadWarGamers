@@ -11,6 +11,13 @@ namespace Application
     {
         public static bool checker { get; set; }
 
+        /** startSpecialAttack() Methode
+        * Einzige public-Methode, fässt alle anderen Methoden dieser Klasse zusammen.
+        * Generiert eine Zufallszahl zwischen 1 und 4.
+        * Zufallszahl entscheidet, ob environment(), distance_move(), help() oder nichts aufgerufen wird.
+        * @param: King1 und King2, abgeleitet von Klasse King
+        */
+
         public static void startSpecialAttack(King king1, King king2)
         {
             int selector = RandomGenerator.generateRandom(1, 4);
@@ -47,6 +54,10 @@ namespace Application
             }
         }
 
+        /** environment() Methode
+        * @param: King1 und King2, abgeleitet von Klasse King
+        */
+
         private static void environment(King king1, King king2)
         {
             int pickedSpecialAttackEnvironment = RandomGenerator.generateRandom(1, 3);
@@ -66,6 +77,10 @@ namespace Application
                     break;
             }
         }
+
+        /** distance_move() Methode
+        * @param: King1 und King2, abgeleitet von Klasse King
+        */
 
         private static void distance_move(King king1, King king2)
         {
@@ -87,6 +102,10 @@ namespace Application
             }
         }
 
+        /** help() Methode
+        * @param: King1 und King2, abgeleitet von Klasse King
+        */
+
         private static void help(King king1, King king2)
         {
             int pickedSpecialAttackHelp = RandomGenerator.generateRandom(1, 3);
@@ -107,12 +126,20 @@ namespace Application
             }
         }
 
+        /** snowfall() Methode
+        * @param: King1 und King2, abgeleitet von Klasse King
+        */
+
         private static void snowfall(King king1, King king2)
         {
             Console.WriteLine("It starts to snow. The strength of all warriors is reduced by 10 percent. ");
             king1.strength = king1.strength * 0.9;
             king2.strength = king2.strength * 0.9;
         }
+
+        /** earthquake() Methode
+        * @param: King1 und King2, abgeleitet von Klasse King
+        */
 
         private static void earthquake(King king1, King king2)
         {
@@ -121,12 +148,20 @@ namespace Application
             king2.warriors = Convert.ToInt32(king2.warriors * 0.85);
         }
 
+        /** sunrise() Methode
+        * @param: King1 und King2, abgeleitet von Klasse King
+        */
+
         private static void sunrise(King king1, King king2)
         {
             Console.WriteLine("The sun is shining. The strength of warriors increases 10 percent");
             king1.strength = king1.strength * 1.1;
             king2.strength = king2.strength * 1.1;
         }
+
+        /** bow_and_arrow() Methode
+        * @param: King1 und King2, abgeleitet von Klasse King
+        */
 
         private static void bow_and_arrow(King king1, King king2)
         {
@@ -136,6 +171,10 @@ namespace Application
             Console.WriteLine(king2.name + " looses 10 % armor strength and " + king2.warriors + " warriors");
         }
 
+        /** rain_of_fire() Methode
+        * @param: King1 und King2, abgeleitet von Klasse King
+        */
+
         private static void rain_of_fire(King king1, King king2)
         {
             king2.armor_strength = king2.armor_strength * 0.7;
@@ -143,6 +182,10 @@ namespace Application
             Console.WriteLine(king1.name + "shoots burning arrows on " + king2.name);
             Console.WriteLine(king2.name + " looses 30 % armor strength and " + king2.warriors + " warriors");
         }
+
+        /** smoke_bomb() Methode
+        * @param: King1 und King2, abgeleitet von Klasse King
+        */
 
         private static void smoke_bomb(King king1, King king2)
         {
@@ -153,6 +196,10 @@ namespace Application
             Console.WriteLine(king2.name + " looses 15 % strength and " + difference + " warriors.");
         }
 
+        /** additional_warriors() Methode
+        * @param: King1 und King2, abgeleitet von Klasse King
+        */
+
         private static void additional_warriors(King king1, King king2)
         {
             int added_warriors = RandomGenerator.generateRandom(50, 400);
@@ -162,6 +209,10 @@ namespace Application
             Console.WriteLine("The Army of " + king2.name + " is afraid. ");
         }
 
+        /** ambush() Methode
+        * @param: King1 und King2, abgeleitet von Klasse King
+        */
+
         private static void ambush(King king1, King king2)
         {
             int warriorloss = RandomGenerator.generateRandom(150, 300);
@@ -170,6 +221,10 @@ namespace Application
             Console.WriteLine(king2.name + "looses" + warriorloss + " warriors.");
             Console.WriteLine(king2.name + " has " + king2.warriors + " left.");
         }
+
+        /** health_and_care_package() Methode
+        * @param: King1 und King2, abgeleitet von Klasse King
+        */
 
         private static void health_and_care_package(King king1)
         {

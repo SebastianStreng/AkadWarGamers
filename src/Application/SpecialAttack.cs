@@ -55,6 +55,9 @@ namespace Application
         }
 
         /** environment() Methode
+         * stellt Umweltereignisse dar.
+         * generiert eine Zufallszahl zwischen 1 und 3.
+         * Zufallszahl entscheidet, ob snowfall(), earthquake() oder sunrise() aufgerufen wird.
         * @param: King1 und King2, abgeleitet von Klasse King
         */
 
@@ -79,6 +82,9 @@ namespace Application
         }
 
         /** distance_move() Methode
+         * stellt einen Angriff aus der Distanz dar.
+         * generiert eine Zufallszahl zwischen 1 und 3.
+         * Zufallszahl entscheidet, ob bow_and_arrow(), rain_of_fire() oder smoke_bomb() aufgerufen wird.
         * @param: King1 und King2, abgeleitet von Klasse King
         */
 
@@ -103,6 +109,9 @@ namespace Application
         }
 
         /** help() Methode
+         * stellt statt einem Angriff eine aktive Hilfe für den Spieler, der am Zug ist dar.
+         * generiert eine Zufallszahl zwischen 1 und 3.
+         * Zufallszahl entscheidet, ob additional_warriors(), anbush() oder health_and_care_package() aufgerufen wird.
         * @param: King1 und King2, abgeleitet von Klasse King
         */
 
@@ -127,6 +136,8 @@ namespace Application
         }
 
         /** snowfall() Methode
+         * stellt einen Schneesturm dar.
+         * Beide Spieler verlieren 10% ihrer Stärke.
         * @param: King1 und King2, abgeleitet von Klasse King
         */
 
@@ -138,6 +149,8 @@ namespace Application
         }
 
         /** earthquake() Methode
+         * Stellt einen Erdbeben dar.
+         * Beide Spieler verlieren 15 Prozent ihrer Krieger.
         * @param: King1 und King2, abgeleitet von Klasse King
         */
 
@@ -149,6 +162,8 @@ namespace Application
         }
 
         /** sunrise() Methode
+         * Stellt Sonnenschein dar.
+         * Beide Spieler gewinnen 10% an Stärke.
         * @param: King1 und King2, abgeleitet von Klasse King
         */
 
@@ -160,30 +175,38 @@ namespace Application
         }
 
         /** bow_and_arrow() Methode
+         * Stellt einen Angriff mit Pfeil und Bogen dar.
+         * Gegner verliert 20 Prozent an Rüstungsstärke und 15 Prozent Krieger.
         * @param: King1 und King2, abgeleitet von Klasse King
         */
 
         private static void bow_and_arrow(King king1, King king2)
         {
-            king2.armor_strength = king2.armor_strength * 0.9;
+            king2.armor_strength = king2.armor_strength * 0.8;
+            var difference = king2.warriors * 0.15;
             king2.warriors = Convert.ToInt32(king2.warriors * 0.85);
             Console.WriteLine(king1.name + " shoots arrows on " + king2.name);
-            Console.WriteLine(king2.name + " looses 10 % armor strength and " + king2.warriors + " warriors");
+            Console.WriteLine(king2.name + " looses 20 % armor strength and " + difference + " warriors");
         }
 
         /** rain_of_fire() Methode
+         * stellt einen brennenden Pfeilregen dar.
+         * Gegner verliert 40 Prozent Rüstungsstärke und 25 Prozent Krieger.
         * @param: King1 und King2, abgeleitet von Klasse King
         */
 
         private static void rain_of_fire(King king1, King king2)
         {
-            king2.armor_strength = king2.armor_strength * 0.7;
+            king2.armor_strength = king2.armor_strength * 0.6;
+            var difference = king2.warriors * 0.25;
             king2.warriors = Convert.ToInt32(king2.warriors * 0.75);
             Console.WriteLine(king1.name + "shoots burning arrows on " + king2.name);
-            Console.WriteLine(king2.name + " looses 30 % armor strength and " + king2.warriors + " warriors");
+            Console.WriteLine(king2.name + " looses 40 % armor strength and " + difference + " warriors");
         }
 
         /** smoke_bomb() Methode
+         * Stellt einen Angriff mit einer Rauchbombe dar.
+         * Gegner verliert 15 Prozent Stärke und 10 Prozent Krieger.
         * @param: King1 und King2, abgeleitet von Klasse King
         */
 
@@ -197,6 +220,8 @@ namespace Application
         }
 
         /** additional_warriors() Methode
+         * Stellt Hilfe durch zusätzliche Krieger dar.
+         * Angreifer bekommt zwischen 50 und 400 zusätzliche Krieger.
         * @param: King1 und King2, abgeleitet von Klasse King
         */
 
@@ -210,6 +235,8 @@ namespace Application
         }
 
         /** ambush() Methode
+         * stellt einen Hinterhalt dar.
+         * Gegner verliert zwischen 150 und 300 Kriegern.
         * @param: King1 und King2, abgeleitet von Klasse King
         */
 
@@ -223,6 +250,8 @@ namespace Application
         }
 
         /** health_and_care_package() Methode
+         * Stellt ein Gesundheitspaket dar.
+         * Angreifer bekommt jeweils 2 Punkte auf alle Stärken.
         * @param: King1 und King2, abgeleitet von Klasse King
         */
 

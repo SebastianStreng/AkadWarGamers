@@ -1,0 +1,55 @@
+\hypertarget{_attack_8cs_source}{}\doxysection{Attack.\+cs}
+\mbox{\hyperlink{_attack_8cs}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_attack_8cs_source_l00001}00001 \textcolor{keyword}{using }System;}
+\DoxyCodeLine{\Hypertarget{_attack_8cs_source_l00002}00002 \textcolor{keyword}{using }System.Collections.Generic;}
+\DoxyCodeLine{\Hypertarget{_attack_8cs_source_l00003}00003 \textcolor{keyword}{using }System.Linq;}
+\DoxyCodeLine{\Hypertarget{_attack_8cs_source_l00004}00004 \textcolor{keyword}{using }System.Text;}
+\DoxyCodeLine{\Hypertarget{_attack_8cs_source_l00005}00005 \textcolor{keyword}{using }System.Threading.Tasks;}
+\DoxyCodeLine{\Hypertarget{_attack_8cs_source_l00006}00006 \textcolor{keyword}{using }Core;}
+\DoxyCodeLine{\Hypertarget{_attack_8cs_source_l00007}00007 }
+\DoxyCodeLine{\Hypertarget{_attack_8cs_source_l00008}\mbox{\hyperlink{namespace_application}{00008}} \textcolor{keyword}{namespace }\mbox{\hyperlink{namespace_application}{Application}}}
+\DoxyCodeLine{\Hypertarget{_attack_8cs_source_l00009}00009 \{}
+\DoxyCodeLine{\Hypertarget{_attack_8cs_source_l00010}\mbox{\hyperlink{class_application_1_1_attack}{00010}}     \textcolor{keyword}{public} \textcolor{keyword}{class }\mbox{\hyperlink{class_application_1_1_attack}{Attack}}}
+\DoxyCodeLine{\Hypertarget{_attack_8cs_source_l00011}00011     \{}
+\DoxyCodeLine{\Hypertarget{_attack_8cs_source_l00020}\mbox{\hyperlink{class_application_1_1_attack_a6abc1027836acdcf0e846cc8cc9824f3}{00020}}         \textcolor{keyword}{public} \textcolor{keyword}{static} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_application_1_1_attack_a6abc1027836acdcf0e846cc8cc9824f3}{attack}}(King king1, King king2)}
+\DoxyCodeLine{\Hypertarget{_attack_8cs_source_l00021}00021         \{}
+\DoxyCodeLine{\Hypertarget{_attack_8cs_source_l00022}00022             var armeeStrenghtKing1 = king1.strength + king1.armor\_strength + king1.weapon\_strength;}
+\DoxyCodeLine{\Hypertarget{_attack_8cs_source_l00023}00023             var armeeStrenghtKing2 = king2.strength + king2.armor\_strength + king2.weapon\_strength;}
+\DoxyCodeLine{\Hypertarget{_attack_8cs_source_l00024}00024 }
+\DoxyCodeLine{\Hypertarget{_attack_8cs_source_l00025}00025             king2.warriors = Convert.ToInt32(king2.warriors * 0.7);}
+\DoxyCodeLine{\Hypertarget{_attack_8cs_source_l00026}00026 }
+\DoxyCodeLine{\Hypertarget{_attack_8cs_source_l00027}00027             \textcolor{keywordflow}{if} (armeeStrenghtKing1 > armeeStrenghtKing2)}
+\DoxyCodeLine{\Hypertarget{_attack_8cs_source_l00028}00028             \{}
+\DoxyCodeLine{\Hypertarget{_attack_8cs_source_l00029}00029                 king2.warriors = Convert.ToInt32(king2.warriors -\/ armeeStrenghtKing1);}
+\DoxyCodeLine{\Hypertarget{_attack_8cs_source_l00030}00030             \}}
+\DoxyCodeLine{\Hypertarget{_attack_8cs_source_l00031}00031             \textcolor{keywordflow}{if} (armeeStrenghtKing1 < armeeStrenghtKing2)}
+\DoxyCodeLine{\Hypertarget{_attack_8cs_source_l00032}00032             \{}
+\DoxyCodeLine{\Hypertarget{_attack_8cs_source_l00033}00033                 king2.warriors = Convert.ToInt32(king2.warriors + armeeStrenghtKing2);}
+\DoxyCodeLine{\Hypertarget{_attack_8cs_source_l00034}00034             \}}
+\DoxyCodeLine{\Hypertarget{_attack_8cs_source_l00035}00035 }
+\DoxyCodeLine{\Hypertarget{_attack_8cs_source_l00036}00036             Console.WriteLine(\$\textcolor{stringliteral}{"{}\{king1.name\} has attacked \{king2.name\}´s armee. "{}} +}
+\DoxyCodeLine{\Hypertarget{_attack_8cs_source_l00037}00037                 \$\textcolor{stringliteral}{"{}\(\backslash\)n \{king2.name\} has now \{king2.warriors\} warriors left."{}});}
+\DoxyCodeLine{\Hypertarget{_attack_8cs_source_l00038}00038         \}}
+\DoxyCodeLine{\Hypertarget{_attack_8cs_source_l00039}00039 }
+\DoxyCodeLine{\Hypertarget{_attack_8cs_source_l00048}\mbox{\hyperlink{class_application_1_1_attack_addc052bdcf73e88c20d6a69dca1fac4d}{00048}}         \textcolor{keyword}{public} \textcolor{keyword}{static} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_application_1_1_attack_addc052bdcf73e88c20d6a69dca1fac4d}{runOver}}(King king1, King king2)}
+\DoxyCodeLine{\Hypertarget{_attack_8cs_source_l00049}00049         \{}
+\DoxyCodeLine{\Hypertarget{_attack_8cs_source_l00050}00050             \textcolor{keywordtype}{int} runOverIndicator = \mbox{\hyperlink{class_application_1_1_random_generator}{RandomGenerator}}.\mbox{\hyperlink{class_application_1_1_random_generator_a009f09fcc750ca8c3ed576165504f2fc}{generateRandom}}(1, king2.warriors);}
+\DoxyCodeLine{\Hypertarget{_attack_8cs_source_l00051}00051             king2.warriors = king2.warriors -\/ runOverIndicator;}
+\DoxyCodeLine{\Hypertarget{_attack_8cs_source_l00052}00052             king1.warriors = king1.warriors + runOverIndicator;}
+\DoxyCodeLine{\Hypertarget{_attack_8cs_source_l00053}00053             king1.weapon\_strength = king1.weapon\_strength * 1.2;}
+\DoxyCodeLine{\Hypertarget{_attack_8cs_source_l00054}00054             king1.armor\_strength = king1.armor\_strength * 1.2;}
+\DoxyCodeLine{\Hypertarget{_attack_8cs_source_l00055}00055             king1.strength = king1.strength * 1.2;}
+\DoxyCodeLine{\Hypertarget{_attack_8cs_source_l00056}00056             Console.WriteLine(\$\textcolor{stringliteral}{"{}\{runOverIndicator\} warriors left \{king2.name\}´s armee and switched sites. \(\backslash\)n"{}} +}
+\DoxyCodeLine{\Hypertarget{_attack_8cs_source_l00057}00057                 \$\textcolor{stringliteral}{"{}\{king1.name\} has now \{king1.warriors\} warriors.\(\backslash\)n"{}} +}
+\DoxyCodeLine{\Hypertarget{_attack_8cs_source_l00058}00058                 \$\textcolor{stringliteral}{"{}Each strength of \{king1.name\}´s armee increased by 20\%"{}});}
+\DoxyCodeLine{\Hypertarget{_attack_8cs_source_l00059}00059         \}}
+\DoxyCodeLine{\Hypertarget{_attack_8cs_source_l00060}00060 }
+\DoxyCodeLine{\Hypertarget{_attack_8cs_source_l00066}\mbox{\hyperlink{class_application_1_1_attack_a209ec748235c3756ed8f811afefa9a62}{00066}}         \textcolor{keyword}{public} \textcolor{keyword}{static} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_application_1_1_attack_a209ec748235c3756ed8f811afefa9a62}{getSpecialAttack}}(King king1, King king2)}
+\DoxyCodeLine{\Hypertarget{_attack_8cs_source_l00067}00067         \{}
+\DoxyCodeLine{\Hypertarget{_attack_8cs_source_l00068}00068             \mbox{\hyperlink{class_application_1_1_special_attack}{SpecialAttack}}.\mbox{\hyperlink{class_application_1_1_special_attack_a09f7743853ba951d84559dd82cb1e3b0}{startSpecialAttack}}(king1, king2);}
+\DoxyCodeLine{\Hypertarget{_attack_8cs_source_l00069}00069         \}}
+\DoxyCodeLine{\Hypertarget{_attack_8cs_source_l00070}00070     \}}
+\DoxyCodeLine{\Hypertarget{_attack_8cs_source_l00071}00071 \}}
+
+\end{DoxyCode}

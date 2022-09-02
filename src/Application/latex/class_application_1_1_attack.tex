@@ -1,0 +1,71 @@
+\hypertarget{class_application_1_1_attack}{}\doxysection{Application.\+Attack Class Reference}
+\label{class_application_1_1_attack}\index{Application.Attack@{Application.Attack}}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{class_application_1_1_attack_a6abc1027836acdcf0e846cc8cc9824f3}{attack}} (King king1, King king2)
+\item 
+static void \mbox{\hyperlink{class_application_1_1_attack_addc052bdcf73e88c20d6a69dca1fac4d}{run\+Over}} (King king1, King king2)
+\item 
+static void \mbox{\hyperlink{class_application_1_1_attack_a209ec748235c3756ed8f811afefa9a62}{get\+Special\+Attack}} (King king1, King king2)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{_attack_8cs_source_l00010}{10}} of file \mbox{\hyperlink{_attack_8cs_source}{Attack.\+cs}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_application_1_1_attack_a6abc1027836acdcf0e846cc8cc9824f3}\label{class_application_1_1_attack_a6abc1027836acdcf0e846cc8cc9824f3}} 
+\index{Application.Attack@{Application.Attack}!attack@{attack}}
+\index{attack@{attack}!Application.Attack@{Application.Attack}}
+\doxysubsubsection{\texorpdfstring{attack()}{attack()}}
+{\footnotesize\ttfamily static void Application.\+Attack.\+attack (\begin{DoxyParamCaption}\item[{King}]{king1,  }\item[{King}]{king2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Attack() Methode Reduziert die Gegnerarmee um 30 Prozent. Berechnet die bisherige Summe aus allen Stärken der beiden Könige. Wenn die Summe der Stärken des Angreifers höher ist als die des Gegners werden die Krieger des Gegners erneut um die Summe reduziert, andernfalls werden die Krieger der Gegner um die Summe ergänzt. 
+\begin{DoxyParams}{Parameters}
+{\em } & King1 und King2, abgeleitet von Klasse King \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_attack_8cs_source_l00020}{20}} of file \mbox{\hyperlink{_attack_8cs_source}{Attack.\+cs}}.
+
+\mbox{\Hypertarget{class_application_1_1_attack_a209ec748235c3756ed8f811afefa9a62}\label{class_application_1_1_attack_a209ec748235c3756ed8f811afefa9a62}} 
+\index{Application.Attack@{Application.Attack}!getSpecialAttack@{getSpecialAttack}}
+\index{getSpecialAttack@{getSpecialAttack}!Application.Attack@{Application.Attack}}
+\doxysubsubsection{\texorpdfstring{getSpecialAttack()}{getSpecialAttack()}}
+{\footnotesize\ttfamily static void Application.\+Attack.\+get\+Special\+Attack (\begin{DoxyParamCaption}\item[{King}]{king1,  }\item[{King}]{king2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\hyperlink{class_application_1_1_attack_a209ec748235c3756ed8f811afefa9a62}{get\+Special\+Attack()}} Methode ruft \mbox{\hyperlink{class_application_1_1_special_attack_a09f7743853ba951d84559dd82cb1e3b0}{Special\+Attack.\+start\+Special\+Attack()}} auf. 
+\begin{DoxyParams}{Parameters}
+{\em } & King1 und King2, abgeleitet von Klasse King \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_attack_8cs_source_l00066}{66}} of file \mbox{\hyperlink{_attack_8cs_source}{Attack.\+cs}}.
+
+\mbox{\Hypertarget{class_application_1_1_attack_addc052bdcf73e88c20d6a69dca1fac4d}\label{class_application_1_1_attack_addc052bdcf73e88c20d6a69dca1fac4d}} 
+\index{Application.Attack@{Application.Attack}!runOver@{runOver}}
+\index{runOver@{runOver}!Application.Attack@{Application.Attack}}
+\doxysubsubsection{\texorpdfstring{runOver()}{runOver()}}
+{\footnotesize\ttfamily static void Application.\+Attack.\+run\+Over (\begin{DoxyParamCaption}\item[{King}]{king1,  }\item[{King}]{king2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\hyperlink{class_application_1_1_attack_addc052bdcf73e88c20d6a69dca1fac4d}{run\+Over()}} Methode lässt sich von \mbox{\hyperlink{class_application_1_1_random_generator_a009f09fcc750ca8c3ed576165504f2fc}{Random\+Generator.\+generate\+Random()}} eine Zufallszahl zwischen 1 und der Anzahl der Krieger im Gegnerteam erstellen. Gegner verliert und Angreifer bekommt die zufallsgenerierte Anzahl an Kriegern. Angreifer bekommt des Weiteren 20\% auf alle Stärken. 
+\begin{DoxyParams}{Parameters}
+{\em } & King1 und King2, abgeleitet von Klasse King \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_attack_8cs_source_l00048}{48}} of file \mbox{\hyperlink{_attack_8cs_source}{Attack.\+cs}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_attack_8cs}{Attack.\+cs}}\end{DoxyCompactItemize}
